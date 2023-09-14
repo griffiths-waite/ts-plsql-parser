@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "sourceMap": true,
+    "module": "CommonJS",
+    "target": "esnext",
+    "lib": ["es6"],
+    "noImplicitAny": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "preserveConstEnums": true,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*"]
+}

@@ -3,6 +3,7 @@ import {
   CommonTokenStream,
   FileStream,
   ParserRuleContext,
+  RecognitionException,
 } from "antlr4";
 import PlSqlLexer from "./antlr/PlSqlLexer";
 import PlSqlParser from "./antlr/PlSqlParser";
@@ -11,7 +12,7 @@ export * from "./antlr/PlSqlParser";
 export * from "./antlr/PlSqlLexer";
 
 /**
- * Helper function to get a parser from a string containing PL/SQL code.
+ * Get a parser from a string containing PL/SQL code.
  * @param input String containing PL/SQL code
  * @returns PlSqlParser
  */
@@ -26,7 +27,7 @@ export function getParserFromInput(input: string) {
 }
 
 /**
- * Helper function to get a parser from a file containing PL/SQL code.
+ * Get a parser from a file containing PL/SQL code.
  * @param inputFile Path to file containing PL/SQL code
  * @returns PlSqlParser
  */
@@ -40,8 +41,6 @@ export function getParserFromFile(inputFile: string) {
   return parser;
 }
 
-// Given a multiline string, a character position, and a line number, return the line number and character position of the character
-// that is at the given position in the string.
 /**
  * Given a multiline string, a character position, and a line number, return the line number
  * and character position of the character that is at the given position in the string.
@@ -68,13 +67,15 @@ function getLineAndCharacterFromPosition(
   return [lineNum, position - lineStart + 1];
 }
 
-type ParsedNode = {
-  type: string;
-  text: string;
-  start: string | null;
-  stop: string | null;
-  nodes: ParsedNode[];
-};
+type ParsedNode =
+  | {
+      type: string;
+      text: string;
+      start: string | null;
+      stop: string | null;
+      nodes: ParsedNode[];
+    }
+  | RecognitionException;
 
 /**
  * Given a string containing PL/SQL code and a parser tree, return a nested tree of nodes
@@ -91,6 +92,11 @@ export function getParsedNodes(
   const printNode = (node: ParserRuleContext): ParsedNode => {
     let start = null;
     let stop = null;
+
+    if (node.exception) {
+      console.log(node.exception);
+      return node.exception;
+    }
 
     const type = node.constructor.name;
 

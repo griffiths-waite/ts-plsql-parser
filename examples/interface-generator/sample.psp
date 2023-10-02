@@ -1,0 +1,12 @@
+CREATE OR REPLACE PACKAGE SAMPLE
+AS
+
+    PROCEDURE get_user_info( p_username INOUT VARCHAR2
+                            , p_id      OUT NUMBER
+                            , p_email OUT VARCHAR2
+                            , p_name OUT VARCHAR2
+                            , p_error_code OUT VARCHAR2
+                            , p_error_message OUT VARCHAR2
+                            , p_error_indicator OUT VARCHAR2);
+
+END SAMPLE;

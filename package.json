@@ -12,6 +12,9 @@
     },
     "./*": "./build/*"
   },
+  "files": [
+    "build"
+  ],
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
@@ -28,11 +31,11 @@
   "author": "warren.bickley@griffiths-waite.co.uk",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "antlr4": "^4.13.0",
+    "antlr4": "^4.13.1",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.5.0",
+    "@types/node": "^20.8.2",
     "ts-node": "^10.9.1"
   }
 }

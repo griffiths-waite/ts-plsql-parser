@@ -6,7 +6,7 @@ import {
   Create_packageContext,
   Procedure_specContext,
   getParserFromFile,
-} from "../../build";
+} from "../../build/index.js";
 
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
@@ -124,7 +124,7 @@ const typeMap = {
   CHAR: "string",
   NCHAR: "string",
   NVARCHAR2: "string",
-};
+} as Record<string, string>;
 
 // Crudely produce a TypeScript interface from the parsed procedures
 listener.packageProcedures.forEach((p) => {

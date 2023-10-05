@@ -1,4 +1,5 @@
 /* This example uses the listener method to generate a TypeScript interface from a procedure definition */
+import * as url from "node:url";
 import { ParseTreeWalker, ParseTreeListener } from "antlr4";
 import {
   PlSqlParserListener,
@@ -6,6 +7,8 @@ import {
   Procedure_specContext,
   getParserFromFile,
 } from "../../build";
+
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 const parser = getParserFromFile(__dirname + "/sample.psp");
 

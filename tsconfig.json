@@ -1,17 +1,26 @@
 {
   "compilerOptions": {
-    "outDir": "build",
-    "sourceMap": true,
-    "module": "CommonJS",
-    "target": "esnext",
-    "lib": ["es6"],
-    "noImplicitAny": true,
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
     "strict": true,
-    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
     "declaration": true,
-    "preserveConstEnums": true,
-    "typeRoots": ["./node_modules/@types"],
-    "types": ["node"]
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "baseUrl": "./src",
+    "outDir": "./build",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "sourceMap": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

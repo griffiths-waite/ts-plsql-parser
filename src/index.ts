@@ -1,9 +1,15 @@
-import PlSqlParserListener from "./antlr/PlSqlParserListener";
-import PlSqlParserVisitor from "./antlr/PlSqlParserVisitor";
-import PlSqlParserBase from "./antlr/PlSqlParserBase";
-import PlSqlLexerBase from "./antlr/PlSqlLexerBase";
-import PlSqlParser from "./antlr/PlSqlParser";
-import PlSqlLexer from "./antlr/PlSqlLexer";
+import PlSqlParserListener from "./antlr/PlSqlParserListener.js";
+import PlSqlParserVisitor from "./antlr/PlSqlParserVisitor.js";
+import PlSqlParserBase from "./antlr/PlSqlParserBase.js";
+import PlSqlLexerBase from "./antlr/PlSqlLexerBase.js";
+import PlSqlParser from "./antlr/PlSqlParser.js";
+import PlSqlLexer from "./antlr/PlSqlLexer.js";
+
+import {
+  getParserFromInput,
+  getParserFromFile,
+  getParsedNodes,
+} from "./parser.js";
 
 export {
   PlSqlParserListener,
@@ -12,9 +18,12 @@ export {
   PlSqlLexerBase,
   PlSqlParser,
   PlSqlLexer,
+  getParserFromInput,
+  getParserFromFile,
+  getParsedNodes,
 };
 
-export * from "./antlr/PlSqlParser";
+export * from "./antlr/PlSqlParser.js";
 
-export * from "./nodeTypes";
-export * from "./parser";
+export * from "./nodeTypes.js";
+export * from "./parser.js";

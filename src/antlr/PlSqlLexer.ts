@@ -11,7 +11,7 @@ import {
 	PredictionContextCache,
 	Token
 } from "antlr4";
-import PlSqlLexerBase from './PlSqlLexerBase';
+import PlSqlLexerBase from './PlSqlLexerBase.js';
 
 export default class PlSqlLexer extends PlSqlLexerBase {
 	public static readonly ABORT = 1;

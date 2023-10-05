@@ -5,8 +5,8 @@ import {
   ParserRuleContext,
   RecognitionException,
 } from "antlr4";
-import PlSqlLexer from "./antlr/PlSqlLexer";
-import PlSqlParser from "./antlr/PlSqlParser";
+import PlSqlLexer from "./antlr/PlSqlLexer.js";
+import PlSqlParser from "./antlr/PlSqlParser.js";
 
 /**
  * Get a parser from a string containing PL/SQL code.

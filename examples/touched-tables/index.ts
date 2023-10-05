@@ -1,15 +1,17 @@
 /* This example parses PL/SQL code and produces a list of tables it touches */
+import * as url from "node:url";
 import { ParseTreeWalker, ParseTreeListener } from "antlr4";
 import {
   PlSqlParserListener,
   General_table_refContext,
-  Into_clauseContext,
   Table_refContext,
   Type_declarationContext,
   Type_nameContext,
   Type_specContext,
   getParserFromFile,
-} from "../../build";
+} from "../../build/index.js";
+
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 const parser = getParserFromFile(__dirname + "/sample.psp");
 

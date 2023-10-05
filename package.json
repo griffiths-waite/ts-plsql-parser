@@ -1,6 +1,6 @@
 {
   "name": "@griffithswaite/ts-plsql-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PL/SQL parser written in TypeScript. Generated using Antlr4.",
   "type": "module",
   "main": "build/index.js",
@@ -31,11 +31,14 @@
   "author": "warren.bickley@griffiths-waite.co.uk",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "antlr4": "4.13.0",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "antlr4": "4.13.0",
     "@types/node": "^20.8.2",
     "ts-node": "^10.9.1"
+  },
+  "peerDependencies": {
+    "antlr4": "4.13.0"
   }
 }

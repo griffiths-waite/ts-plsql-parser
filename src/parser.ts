@@ -1,7 +1,6 @@
 import {
   CharStream,
   CommonTokenStream,
-  FileStream,
   ParserRuleContext,
   RecognitionException,
 } from "antlr4";
@@ -28,7 +27,9 @@ export function getParserFromInput(input: string) {
  * @param inputFile Path to file containing PL/SQL code
  * @returns PlSqlParser
  */
-export function getParserFromFile(inputFile: string) {
+export async function getParserFromFile(inputFile: string) {
+  const { FileStream } = await import("antlr4");
+
   const inputStream = new FileStream(inputFile);
 
   let lexer = new PlSqlLexer(inputStream);

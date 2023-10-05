@@ -13,7 +13,7 @@ import {
 
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
-const parser = getParserFromFile(__dirname + "/sample.psp");
+const parser = await getParserFromFile(__dirname + "/sample.psp");
 
 class TouchedTablesListener
   extends ParseTreeListener

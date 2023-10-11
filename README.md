@@ -21,7 +21,7 @@ Parsing code such as PL/SQL can be useful for a number of reasons, especially in
 - Find unused columns on your tables.
 - You can use it... to deduce just about anything you want from your code.
 
-Being able to easily parse PL/SQL code can be an incredibly powerful tool in your arsenal. Combined with our [PL/SQL Viewer](https://tools.griffiths-waite.co.uk/plsql-viewer), you can quickly and easily take advantage of legacy code by demystifying it.
+Being able to easily parse PL/SQL code can be an incredibly powerful tool in your arsenal. Combined with our [PL/SQL Viewer](https://griffiths-waite.co.uk/tools/plsql-viewer), you can quickly and easily take advantage of legacy code by interrogating it.
 
 **Check out the [examples within this repository](/examples) to see how you can use this package to parse PL/SQL code.**
 
@@ -33,22 +33,26 @@ npm install @griffithswaite/ts-plsql-parser
 
 ## Usage
 
-Antlr produces two methods for parsing code: a visitor and a listener. We also provide a method for parsing code into a single JSON object, which is useful for quick parsing and debugging. You can read more about Antlr's visitor and listener patterns [here](https://github.com/antlr/antlr4/blob/487cb28bd359587e67794b25b144b7df83ddf1a2/doc/typescript-target.md#L66).
+Antlr produces two methods for parsing code: a visitor and a listener. We also provide a method for parsing code into a single JSON representation of the tree (`getParsedNodes`), this can be useful for quick parsing and debugging. You can read more about Antlr's visitor and listener patterns [here](https://github.com/antlr/antlr4/blob/487cb28bd359587e67794b25b144b7df83ddf1a2/doc/typescript-target.md#L66).
 
-For brevity, we have documented only the listener approach below so you can lift it and get started.
+The listener method is documented below in ESM format. If you're using CommonJS you may have to modify this code (such as removing the node:url import and __dirname definition).
+
 
 ### Listener
 
 ```typescript
+import * as url from "node:url";
+import { ParseTreeWalker, ParseTreeListener } from "antlr4";
 import {
   ParseTreeListener,
   PlSqlParserListener,
   getParserFromFile,
 } from "@griffithswaite/ts-plsql-parser";
 
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 const parser = getParserFromFile(__dirname + "/your-code.pbp");
 
-class YourListenerListener
+class YourListener
   extends ParseTreeListener
   implements PlSqlParserListener
 {
@@ -57,7 +61,7 @@ class YourListenerListener
   }
 }
 
-const listener = new YourListenerListener();
+const listener = new YourListener();
 // Use the entry point for listeners
-ParseTreeWalker.DEFAULT.walk(listener, parser.unit_statement());
+ParseTreeWalker.DEFAULT.walk(listener, parser.sql_script());
 ```

@@ -7173,7 +7173,7 @@ regular_id
     | REGR_
     | VAR_
     | VALUE
-    | COVAR_
+	| COVAR_
     ;
 
 non_reserved_keywords_in_12c
@@ -8735,6 +8735,7 @@ non_reserved_keywords_pre12c
     | SEMIJOIN_DRIVER
     | SEMIJOIN
     | SEMI_TO_INNER
+    | SEQ
     | SEQUENCED
     | SEQUENCE
     | SEQUENTIAL

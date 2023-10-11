@@ -109,7 +109,7 @@ class ProcedureTypeListener
 
 const listener = new ProcedureTypeListener();
 // Use the entry point for listeners
-ParseTreeWalker.DEFAULT.walk(listener, parser.unit_statement());
+ParseTreeWalker.DEFAULT.walk(listener, parser.sql_script());
 
 const typeMap = {
   VARCHAR2: "string",

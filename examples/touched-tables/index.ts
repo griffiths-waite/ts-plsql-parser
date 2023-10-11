@@ -65,6 +65,6 @@ class TouchedTablesListener
 
 const listener = new TouchedTablesListener();
 // Use the entry point for listeners
-ParseTreeWalker.DEFAULT.walk(listener, parser.unit_statement());
+ParseTreeWalker.DEFAULT.walk(listener, parser.sql_script());
 
 console.log(listener.touchedTables);

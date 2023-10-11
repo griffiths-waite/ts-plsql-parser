@@ -1,6 +1,6 @@
 {
   "name": "@griffithswaite/ts-plsql-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "PL/SQL parser written in TypeScript. Generated using Antlr4.",
   "type": "module",
   "main": "build/index.js",
@@ -18,9 +18,7 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "build:antlr4-parser": "antlr4 -o src/antlr -Dlanguage=TypeScript antlr/PlSqlParser.g4 -visitor",
-    "build:antlr4-lexer": "antlr4 -o src/antlr -Dlanguage=TypeScript antlr/PlSqlLexer.g4",
-    "build:antlr4": "pnpm run build:antlr4-parser && pnpm run build:antlr4-lexer"
+    "build:antlr4": "pnpm exec sh ./build-antlr.sh"
   },
   "keywords": [
     "plsql",

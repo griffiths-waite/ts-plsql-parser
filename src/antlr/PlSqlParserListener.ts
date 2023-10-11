@@ -1,4 +1,4 @@
-// Generated from PlSqlParser.g4 by ANTLR 4.13.1
+// Generated from antlr/PlSqlParser.g4 by ANTLR 4.13.1
 
 import {ParseTreeListener} from "antlr4";
 

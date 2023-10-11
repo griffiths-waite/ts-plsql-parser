@@ -1,4 +1,4 @@
-// Generated from PlSqlLexer.g4 by ANTLR 4.13.1
+// Generated from antlr/PlSqlLexer.g4 by ANTLR 4.13.1
 // noinspection ES6UnusedImports,JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 import {
 	ATN,
@@ -1574,10 +1574,10 @@ export default class PlSqlLexer extends PlSqlLexerBase {
 	public static readonly SEMIJOIN_DRIVER = 1558;
 	public static readonly SEMIJOIN = 1559;
 	public static readonly SEMI_TO_INNER = 1560;
-	public static readonly SEQUENCED = 1561;
-	public static readonly SEQUENCE = 1562;
-	public static readonly SEQUENTIAL = 1563;
-	public static readonly SEQ = 1564;
+	public static readonly SEQ = 1561;
+	public static readonly SEQUENCED = 1562;
+	public static readonly SEQUENCE = 1563;
+	public static readonly SEQUENTIAL = 1564;
 	public static readonly SERIALIZABLE = 1565;
 	public static readonly SERIALLY_REUSABLE = 1566;
 	public static readonly SERIAL = 1567;
@@ -3690,10 +3690,10 @@ export default class PlSqlLexer extends PlSqlLexerBase {
                                                             "'SELF'", "'SEMIJOIN_DRIVER'", 
                                                             "'SEMIJOIN'", 
                                                             "'SEMI_TO_INNER'", 
-                                                            "'SEQUENCED'", 
+                                                            "'SEQ'", "'SEQUENCED'", 
                                                             "'SEQUENCE'", 
                                                             "'SEQUENTIAL'", 
-                                                            "'SEQ'", "'SERIALIZABLE'", 
+                                                            "'SERIALIZABLE'", 
                                                             "'SERIALLY_REUSABLE'", 
                                                             "'SERIAL'", 
                                                             "'SERVERERROR'", 
@@ -5613,10 +5613,10 @@ export default class PlSqlLexer extends PlSqlLexerBase {
                                                              "SEMIJOIN_DRIVER", 
                                                              "SEMIJOIN", 
                                                              "SEMI_TO_INNER", 
-                                                             "SEQUENCED", 
+                                                             "SEQ", "SEQUENCED", 
                                                              "SEQUENCE", 
                                                              "SEQUENTIAL", 
-                                                             "SEQ", "SERIALIZABLE", 
+                                                             "SERIALIZABLE", 
                                                              "SERIALLY_REUSABLE", 
                                                              "SERIAL", "SERVERERROR", 
                                                              "SERVICE_NAME_CONVERT", 
@@ -6571,8 +6571,8 @@ export default class PlSqlLexer extends PlSqlLexerBase {
 		"SCRUB", "SD_ALL", "SD_INHIBIT", "SDO_GEOM_MBR", "SDO_GEOMETRY", "SD_SHOW", 
 		"SEARCH", "SECOND", "SECONDS", "SECRET", "SECUREFILE_DBA", "SECUREFILE", 
 		"SECURITY", "SEED", "SEG_BLOCK", "SEG_FILE", "SEGMENT", "SELECTIVITY", 
-		"SELECT", "SELF", "SEMIJOIN_DRIVER", "SEMIJOIN", "SEMI_TO_INNER", "SEQUENCED", 
-		"SEQUENCE", "SEQUENTIAL", "SEQ", "SERIALIZABLE", "SERIALLY_REUSABLE", 
+		"SELECT", "SELF", "SEMIJOIN_DRIVER", "SEMIJOIN", "SEMI_TO_INNER", "SEQ", 
+		"SEQUENCED", "SEQUENCE", "SEQUENTIAL", "SERIALIZABLE", "SERIALLY_REUSABLE", 
 		"SERIAL", "SERVERERROR", "SERVICE_NAME_CONVERT", "SERVICE", "SERVICES", 
 		"SESSION_CACHED_CURSORS", "SESSION", "SESSIONS_PER_USER", "SESSIONTIMEZONE", 
 		"SESSIONTZNAME", "SET", "SETS", "SETTINGS", "SET_TO_JOIN", "SEVERE", "SHARDSPACE", 
@@ -6761,14 +6761,14 @@ export default class PlSqlLexer extends PlSqlLexerBase {
 	private REMARK_COMMENT_sempred(localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 0:
-			return this.self.IsNewlineAtPos(-4);
+			return this.IsNewlineAtPos(-4);
 		}
 		return true;
 	}
 	private PROMPT_MESSAGE_sempred(localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 1:
-			return this.self.IsNewlineAtPos(-4);
+			return this.IsNewlineAtPos(-4);
 		}
 		return true;
 	}
@@ -8658,10 +8658,10 @@ export default class PlSqlLexer extends PlSqlLexerBase {
 	1557,1,1557,1,1557,1,1557,1,1557,1,1557,1,1557,1,1557,1,1557,1,1557,1,1557,
 	1,1557,1,1557,1,1557,1,1558,1,1558,1,1558,1,1558,1,1558,1,1558,1,1558,1,
 	1558,1,1558,1,1559,1,1559,1,1559,1,1559,1,1559,1,1559,1,1559,1,1559,1,1559,
-	1,1559,1,1559,1,1559,1,1559,1,1559,1,1560,1,1560,1,1560,1,1560,1,1560,1,
-	1560,1,1560,1,1560,1,1560,1,1560,1,1561,1,1561,1,1561,1,1561,1,1561,1,1561,
-	1,1561,1,1561,1,1561,1,1562,1,1562,1,1562,1,1562,1,1562,1,1562,1,1562,1,
-	1562,1,1562,1,1562,1,1562,1,1563,1,1563,1,1563,1,1563,1,1564,1,1564,1,1564,
+	1,1559,1,1559,1,1559,1,1559,1,1559,1,1560,1,1560,1,1560,1,1560,1,1561,1,
+	1561,1,1561,1,1561,1,1561,1,1561,1,1561,1,1561,1,1561,1,1561,1,1562,1,1562,
+	1,1562,1,1562,1,1562,1,1562,1,1562,1,1562,1,1562,1,1563,1,1563,1,1563,1,
+	1563,1,1563,1,1563,1,1563,1,1563,1,1563,1,1563,1,1563,1,1564,1,1564,1,1564,
 	1,1564,1,1564,1,1564,1,1564,1,1564,1,1564,1,1564,1,1564,1,1564,1,1564,1,
 	1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,
 	1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1565,1,1566,1,1566,1,1566,1,
@@ -10723,8 +10723,8 @@ export default class PlSqlLexer extends PlSqlLexerBase {
 	1,0,0,0,3093,21340,1,0,0,0,3095,21347,1,0,0,0,3097,21362,1,0,0,0,3099,21373,
 	1,0,0,0,3101,21382,1,0,0,0,3103,21387,1,0,0,0,3105,21397,1,0,0,0,3107,21406,
 	1,0,0,0,3109,21414,1,0,0,0,3111,21426,1,0,0,0,3113,21433,1,0,0,0,3115,21438,
-	1,0,0,0,3117,21454,1,0,0,0,3119,21463,1,0,0,0,3121,21477,1,0,0,0,3123,21487,
-	1,0,0,0,3125,21496,1,0,0,0,3127,21507,1,0,0,0,3129,21511,1,0,0,0,3131,21524,
+	1,0,0,0,3117,21454,1,0,0,0,3119,21463,1,0,0,0,3121,21477,1,0,0,0,3123,21481,
+	1,0,0,0,3125,21491,1,0,0,0,3127,21500,1,0,0,0,3129,21511,1,0,0,0,3131,21524,
 	1,0,0,0,3133,21542,1,0,0,0,3135,21549,1,0,0,0,3137,21561,1,0,0,0,3139,21582,
 	1,0,0,0,3141,21590,1,0,0,0,3143,21599,1,0,0,0,3145,21622,1,0,0,0,3147,21630,
 	1,0,0,0,3149,21648,1,0,0,0,3151,21664,1,0,0,0,3153,21678,1,0,0,0,3155,21682,
@@ -15425,15 +15425,15 @@ export default class PlSqlLexer extends PlSqlLexerBase {
 	7,12,0,0,21467,21468,5,95,0,0,21468,21469,7,4,0,0,21469,21470,7,2,0,0,21470,
 	21471,5,95,0,0,21471,21472,7,12,0,0,21472,21473,7,7,0,0,21473,21474,7,7,
 	0,0,21474,21475,7,6,0,0,21475,21476,7,3,0,0,21476,3120,1,0,0,0,21477,21478,
-	7,5,0,0,21478,21479,7,6,0,0,21479,21480,7,24,0,0,21480,21481,7,10,0,0,21481,
-	21482,7,6,0,0,21482,21483,7,7,0,0,21483,21484,7,8,0,0,21484,21485,7,6,0,
-	0,21485,21486,7,9,0,0,21486,3122,1,0,0,0,21487,21488,7,5,0,0,21488,21489,
-	7,6,0,0,21489,21490,7,24,0,0,21490,21491,7,10,0,0,21491,21492,7,6,0,0,21492,
-	21493,7,7,0,0,21493,21494,7,8,0,0,21494,21495,7,6,0,0,21495,3124,1,0,0,
-	0,21496,21497,7,5,0,0,21497,21498,7,6,0,0,21498,21499,7,24,0,0,21499,21500,
-	7,10,0,0,21500,21501,7,6,0,0,21501,21502,7,7,0,0,21502,21503,7,4,0,0,21503,
-	21504,7,12,0,0,21504,21505,7,0,0,0,21505,21506,7,11,0,0,21506,3126,1,0,
-	0,0,21507,21508,7,5,0,0,21508,21509,7,6,0,0,21509,21510,7,24,0,0,21510,
+	7,5,0,0,21478,21479,7,6,0,0,21479,21480,7,24,0,0,21480,3122,1,0,0,0,21481,
+	21482,7,5,0,0,21482,21483,7,6,0,0,21483,21484,7,24,0,0,21484,21485,7,10,
+	0,0,21485,21486,7,6,0,0,21486,21487,7,7,0,0,21487,21488,7,8,0,0,21488,21489,
+	7,6,0,0,21489,21490,7,9,0,0,21490,3124,1,0,0,0,21491,21492,7,5,0,0,21492,
+	21493,7,6,0,0,21493,21494,7,24,0,0,21494,21495,7,10,0,0,21495,21496,7,6,
+	0,0,21496,21497,7,7,0,0,21497,21498,7,8,0,0,21498,21499,7,6,0,0,21499,3126,
+	1,0,0,0,21500,21501,7,5,0,0,21501,21502,7,6,0,0,21502,21503,7,24,0,0,21503,
+	21504,7,10,0,0,21504,21505,7,6,0,0,21505,21506,7,7,0,0,21506,21507,7,4,
+	0,0,21507,21508,7,12,0,0,21508,21509,7,0,0,0,21509,21510,7,11,0,0,21510,
 	3128,1,0,0,0,21511,21512,7,5,0,0,21512,21513,7,6,0,0,21513,21514,7,3,0,
 	0,21514,21515,7,12,0,0,21515,21516,7,0,0,0,21516,21517,7,11,0,0,21517,21518,
 	7,12,0,0,21518,21519,7,23,0,0,21519,21520,7,0,0,0,21520,21521,7,1,0,0,21521,

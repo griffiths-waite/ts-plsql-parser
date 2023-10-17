@@ -1,7 +1,7 @@
 {
   "name": "@griffithswaite/ts-plsql-parser",
-  "version": "1.0.4",
-  "description": "PL/SQL parser written in TypeScript. Generated using Antlr4.",
+  "version": "1.0.5",
+  "description": "PL/SQL parser in TypeScript. Generated using Antlr4.",
   "type": "module",
   "main": "build/index.js",
   "types": "build/index.d.ts",

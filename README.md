@@ -1,6 +1,6 @@
 <table><tr><td><img src="https://avatars.githubusercontent.com/u/144829329?s=200&v=4" /></td><td>
 
-<h2>PL/SQL parser written in TypeScript</h2>
+<h2>PL/SQL Parser in TypeScript</h2>
 <p>Generated using <a href="https://github.com/antlr/antlr4">Antlr4</a>. Package and examples provided by <a href="https://griffiths-waite.co.uk">Griffiths Waite</a>.</p>
 
 </td></tr></table>
@@ -21,9 +21,14 @@ Parsing code such as PL/SQL can be useful for a number of reasons, especially in
 - Find unused columns on your tables.
 - You can use it... to deduce just about anything you want from your code.
 
-Being able to easily parse PL/SQL code can be an incredibly powerful tool in your arsenal. Combined with our [PL/SQL Viewer](https://griffiths-waite.co.uk/tools/plsql-viewer), you can quickly and easily take advantage of legacy code by interrogating it.
+Being able to easily parse PL/SQL code can be an incredibly powerful tool in your arsenal for interrogating what your code is doing. Combined with our [PL/SQL Viewer](https://plsql-ast-viewer.vercel.app/), you can quickly and easily take advantage of legacy code by interrogating it.
 
 **Check out the [examples within this repository](/examples) to see how you can use this package to parse PL/SQL code.**
+
+To try out an example, you can pull the repo and after installing dependencies do the following:
+```
+node --loader=ts-node/esm examples/interface-generator/index.ts
+```
 
 ## Installation
 

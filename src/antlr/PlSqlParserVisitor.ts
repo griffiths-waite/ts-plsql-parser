@@ -1,4 +1,4 @@
-// Generated from antlr/PlSqlParser.g4 by ANTLR 4.13.1
+// Generated from antlr/PlSqlParser.g4 by ANTLR 4.13.2
 
 import {ParseTreeVisitor} from 'antlr4';
 
@@ -30,8 +30,6 @@ import { Diskgroup_volume_clausesContext } from "./PlSqlParser.js";
 import { Add_volume_clauseContext } from "./PlSqlParser.js";
 import { Modify_volume_clauseContext } from "./PlSqlParser.js";
 import { Diskgroup_attributesContext } from "./PlSqlParser.js";
-import { Modify_diskgroup_fileContext } from "./PlSqlParser.js";
-import { Disk_region_clauseContext } from "./PlSqlParser.js";
 import { Drop_diskgroup_file_clauseContext } from "./PlSqlParser.js";
 import { Convert_redundancy_clauseContext } from "./PlSqlParser.js";
 import { Usergroup_clausesContext } from "./PlSqlParser.js";
@@ -62,6 +60,11 @@ import { Sql_macro_bodyContext } from "./PlSqlParser.js";
 import { Parallel_enable_clauseContext } from "./PlSqlParser.js";
 import { Partition_by_clauseContext } from "./PlSqlParser.js";
 import { Result_cache_clauseContext } from "./PlSqlParser.js";
+import { Accessible_by_clauseContext } from "./PlSqlParser.js";
+import { Default_collation_clauseContext } from "./PlSqlParser.js";
+import { Aggregate_clauseContext } from "./PlSqlParser.js";
+import { Pipelined_using_clauseContext } from "./PlSqlParser.js";
+import { AccessorContext } from "./PlSqlParser.js";
 import { Relies_on_partContext } from "./PlSqlParser.js";
 import { Streaming_clauseContext } from "./PlSqlParser.js";
 import { Alter_outlineContext } from "./PlSqlParser.js";
@@ -111,7 +114,6 @@ import { For_each_rowContext } from "./PlSqlParser.js";
 import { Compound_dml_triggerContext } from "./PlSqlParser.js";
 import { Non_dml_triggerContext } from "./PlSqlParser.js";
 import { Trigger_bodyContext } from "./PlSqlParser.js";
-import { Routine_clauseContext } from "./PlSqlParser.js";
 import { Compound_trigger_blockContext } from "./PlSqlParser.js";
 import { Timing_point_sectionContext } from "./PlSqlParser.js";
 import { Non_dml_eventContext } from "./PlSqlParser.js";
@@ -126,8 +128,6 @@ import { Compile_type_clauseContext } from "./PlSqlParser.js";
 import { Replace_type_clauseContext } from "./PlSqlParser.js";
 import { Alter_method_specContext } from "./PlSqlParser.js";
 import { Alter_method_elementContext } from "./PlSqlParser.js";
-import { Alter_attribute_definitionContext } from "./PlSqlParser.js";
-import { Attribute_definitionContext } from "./PlSqlParser.js";
 import { Alter_collection_clausesContext } from "./PlSqlParser.js";
 import { Dependent_handling_clauseContext } from "./PlSqlParser.js";
 import { Dependent_exceptions_partContext } from "./PlSqlParser.js";
@@ -153,6 +153,7 @@ import { Element_spec_optionsContext } from "./PlSqlParser.js";
 import { Subprogram_specContext } from "./PlSqlParser.js";
 import { Overriding_subprogram_specContext } from "./PlSqlParser.js";
 import { Overriding_function_specContext } from "./PlSqlParser.js";
+import { Overriding_procedure_specContext } from "./PlSqlParser.js";
 import { Type_procedure_specContext } from "./PlSqlParser.js";
 import { Type_function_specContext } from "./PlSqlParser.js";
 import { Constructor_specContext } from "./PlSqlParser.js";
@@ -246,6 +247,7 @@ import { Xmlindex_clauseContext } from "./PlSqlParser.js";
 import { Local_xmlindex_clauseContext } from "./PlSqlParser.js";
 import { Global_partitioned_indexContext } from "./PlSqlParser.js";
 import { Index_partitioning_clauseContext } from "./PlSqlParser.js";
+import { Index_partitioning_values_listContext } from "./PlSqlParser.js";
 import { Local_partitioned_indexContext } from "./PlSqlParser.js";
 import { On_range_partitioned_tableContext } from "./PlSqlParser.js";
 import { On_list_partitioned_tableContext } from "./PlSqlParser.js";
@@ -466,6 +468,7 @@ import { Autoextend_clauseContext } from "./PlSqlParser.js";
 import { Maxsize_clauseContext } from "./PlSqlParser.js";
 import { Build_clauseContext } from "./PlSqlParser.js";
 import { Parallel_clauseContext } from "./PlSqlParser.js";
+import { Parallel_instances_clauseContext } from "./PlSqlParser.js";
 import { Alter_materialized_viewContext } from "./PlSqlParser.js";
 import { Alter_mv_option1Context } from "./PlSqlParser.js";
 import { Alter_mv_refreshContext } from "./PlSqlParser.js";
@@ -475,10 +478,6 @@ import { Alter_materialized_view_logContext } from "./PlSqlParser.js";
 import { Add_mv_log_column_clauseContext } from "./PlSqlParser.js";
 import { Move_mv_log_clauseContext } from "./PlSqlParser.js";
 import { Mv_log_augmentationContext } from "./PlSqlParser.js";
-import { Datetime_exprContext } from "./PlSqlParser.js";
-import { Interval_exprContext } from "./PlSqlParser.js";
-import { Synchronous_or_asynchronousContext } from "./PlSqlParser.js";
-import { Including_or_excludingContext } from "./PlSqlParser.js";
 import { Create_materialized_view_logContext } from "./PlSqlParser.js";
 import { New_values_clauseContext } from "./PlSqlParser.js";
 import { Mv_log_purge_clauseContext } from "./PlSqlParser.js";
@@ -507,7 +506,10 @@ import { Create_materialized_viewContext } from "./PlSqlParser.js";
 import { Scoped_table_ref_constraintContext } from "./PlSqlParser.js";
 import { Mv_column_aliasContext } from "./PlSqlParser.js";
 import { Create_mv_refreshContext } from "./PlSqlParser.js";
+import { Query_rewrite_clauseContext } from "./PlSqlParser.js";
+import { Unusable_editions_clauseContext } from "./PlSqlParser.js";
 import { Drop_materialized_viewContext } from "./PlSqlParser.js";
+import { Drop_materialized_view_logContext } from "./PlSqlParser.js";
 import { Create_contextContext } from "./PlSqlParser.js";
 import { Oracle_namespaceContext } from "./PlSqlParser.js";
 import { Create_clusterContext } from "./PlSqlParser.js";
@@ -533,6 +535,8 @@ import { Oid_clauseContext } from "./PlSqlParser.js";
 import { Object_propertiesContext } from "./PlSqlParser.js";
 import { Object_table_substitutionContext } from "./PlSqlParser.js";
 import { Relational_tableContext } from "./PlSqlParser.js";
+import { Relational_table_propertiesContext } from "./PlSqlParser.js";
+import { Relational_table_propertyContext } from "./PlSqlParser.js";
 import { Immutable_table_clausesContext } from "./PlSqlParser.js";
 import { Immutable_table_no_drop_clauseContext } from "./PlSqlParser.js";
 import { Immutable_table_no_delete_clauseContext } from "./PlSqlParser.js";
@@ -582,11 +586,11 @@ import { List_subpartition_descContext } from "./PlSqlParser.js";
 import { Individual_hash_subpartsContext } from "./PlSqlParser.js";
 import { Hash_subparts_by_quantityContext } from "./PlSqlParser.js";
 import { Range_values_clauseContext } from "./PlSqlParser.js";
+import { Range_values_listContext } from "./PlSqlParser.js";
 import { List_values_clauseContext } from "./PlSqlParser.js";
 import { Table_partition_descriptionContext } from "./PlSqlParser.js";
 import { Partitioning_storage_clauseContext } from "./PlSqlParser.js";
 import { Lob_partitioning_storageContext } from "./PlSqlParser.js";
-import { Datatype_null_enableContext } from "./PlSqlParser.js";
 import { Size_clauseContext } from "./PlSqlParser.js";
 import { Table_compressionContext } from "./PlSqlParser.js";
 import { Inmemory_table_clauseContext } from "./PlSqlParser.js";
@@ -613,7 +617,28 @@ import { Heap_org_table_clauseContext } from "./PlSqlParser.js";
 import { External_table_clauseContext } from "./PlSqlParser.js";
 import { Access_driver_typeContext } from "./PlSqlParser.js";
 import { External_table_data_propsContext } from "./PlSqlParser.js";
-import { Opaque_format_specContext } from "./PlSqlParser.js";
+import { External_table_data_formatContext } from "./PlSqlParser.js";
+import { External_table_transformContext } from "./PlSqlParser.js";
+import { External_table_fieldContext } from "./PlSqlParser.js";
+import { External_table_field_listContext } from "./PlSqlParser.js";
+import { External_table_fields_clauseContext } from "./PlSqlParser.js";
+import { External_table_position_clauseContext } from "./PlSqlParser.js";
+import { External_table_datatype_clauseContext } from "./PlSqlParser.js";
+import { External_table_delimit_clauseContext } from "./PlSqlParser.js";
+import { External_table_trim_clauseContext } from "./PlSqlParser.js";
+import { External_table_date_format_clauseContext } from "./PlSqlParser.js";
+import { External_table_init_clauseContext } from "./PlSqlParser.js";
+import { External_table_condition_clauseContext } from "./PlSqlParser.js";
+import { External_table_lls_clauseContext } from "./PlSqlParser.js";
+import { External_table_recordsContext } from "./PlSqlParser.js";
+import { External_table_record_options_clauseContext } from "./PlSqlParser.js";
+import { External_table_output_filesContext } from "./PlSqlParser.js";
+import { External_table_fieldsContext } from "./PlSqlParser.js";
+import { External_table_datapumpContext } from "./PlSqlParser.js";
+import { External_table_hiveContext } from "./PlSqlParser.js";
+import { External_table_hive_parameter_mapContext } from "./PlSqlParser.js";
+import { External_table_hive_parameter_map_entryContext } from "./PlSqlParser.js";
+import { External_table_directoryContext } from "./PlSqlParser.js";
 import { Row_movement_clauseContext } from "./PlSqlParser.js";
 import { Flashback_archive_clauseContext } from "./PlSqlParser.js";
 import { Log_grpContext } from "./PlSqlParser.js";
@@ -719,6 +744,7 @@ import { Replay_upgrade_clausesContext } from "./PlSqlParser.js";
 import { Alter_database_linkContext } from "./PlSqlParser.js";
 import { Password_valueContext } from "./PlSqlParser.js";
 import { Link_authenticationContext } from "./PlSqlParser.js";
+import { Create_schemaContext } from "./PlSqlParser.js";
 import { Create_databaseContext } from "./PlSqlParser.js";
 import { Database_logging_clausesContext } from "./PlSqlParser.js";
 import { Database_logging_sub_clauseContext } from "./PlSqlParser.js";
@@ -733,7 +759,6 @@ import { Default_temp_tablespaceContext } from "./PlSqlParser.js";
 import { Undo_tablespaceContext } from "./PlSqlParser.js";
 import { Drop_databaseContext } from "./PlSqlParser.js";
 import { Create_database_linkContext } from "./PlSqlParser.js";
-import { DblinkContext } from "./PlSqlParser.js";
 import { Drop_database_linkContext } from "./PlSqlParser.js";
 import { Alter_tablespace_setContext } from "./PlSqlParser.js";
 import { Alter_tablespace_attrsContext } from "./PlSqlParser.js";
@@ -754,6 +779,9 @@ import { Truncate_table_partitionContext } from "./PlSqlParser.js";
 import { Exchange_table_partitionContext } from "./PlSqlParser.js";
 import { Coalesce_table_partitionContext } from "./PlSqlParser.js";
 import { Alter_interval_partitionContext } from "./PlSqlParser.js";
+import { Move_table_partitionContext } from "./PlSqlParser.js";
+import { Filter_conditionContext } from "./PlSqlParser.js";
+import { Rename_table_partitionContext } from "./PlSqlParser.js";
 import { Partition_extended_namesContext } from "./PlSqlParser.js";
 import { Subpartition_extended_namesContext } from "./PlSqlParser.js";
 import { Alter_table_properties_1Context } from "./PlSqlParser.js";
@@ -790,7 +818,6 @@ import { Modify_col_propertiesContext } from "./PlSqlParser.js";
 import { Modify_col_visibilityContext } from "./PlSqlParser.js";
 import { Modify_col_substitutableContext } from "./PlSqlParser.js";
 import { Add_column_clauseContext } from "./PlSqlParser.js";
-import { Alter_varray_col_propertiesContext } from "./PlSqlParser.js";
 import { Varray_col_propertiesContext } from "./PlSqlParser.js";
 import { Varray_storage_clauseContext } from "./PlSqlParser.js";
 import { Lob_segnameContext } from "./PlSqlParser.js";
@@ -817,32 +844,24 @@ import { Identity_clauseContext } from "./PlSqlParser.js";
 import { Identity_options_parenthesesContext } from "./PlSqlParser.js";
 import { Identity_optionsContext } from "./PlSqlParser.js";
 import { Virtual_column_definitionContext } from "./PlSqlParser.js";
+import { Virtual_column_expressionContext } from "./PlSqlParser.js";
 import { Autogenerated_sequence_definitionContext } from "./PlSqlParser.js";
+import { By_user_for_statistics_clauseContext } from "./PlSqlParser.js";
 import { Evaluation_edition_clauseContext } from "./PlSqlParser.js";
-import { Out_of_line_part_storageContext } from "./PlSqlParser.js";
 import { Nested_table_col_propertiesContext } from "./PlSqlParser.js";
 import { Nested_itemContext } from "./PlSqlParser.js";
 import { Substitutable_column_clauseContext } from "./PlSqlParser.js";
 import { Partition_nameContext } from "./PlSqlParser.js";
 import { Supplemental_logging_propsContext } from "./PlSqlParser.js";
-import { Column_or_attributeContext } from "./PlSqlParser.js";
 import { Object_type_col_propertiesContext } from "./PlSqlParser.js";
 import { Constraint_clausesContext } from "./PlSqlParser.js";
 import { Old_constraint_nameContext } from "./PlSqlParser.js";
 import { New_constraint_nameContext } from "./PlSqlParser.js";
 import { Drop_constraint_clauseContext } from "./PlSqlParser.js";
-import { Drop_primary_key_or_unique_or_generic_clauseContext } from "./PlSqlParser.js";
-import { Add_constraintContext } from "./PlSqlParser.js";
-import { Add_constraint_clauseContext } from "./PlSqlParser.js";
 import { Check_constraintContext } from "./PlSqlParser.js";
-import { Drop_constraintContext } from "./PlSqlParser.js";
-import { Enable_constraintContext } from "./PlSqlParser.js";
-import { Disable_constraintContext } from "./PlSqlParser.js";
 import { Foreign_key_clauseContext } from "./PlSqlParser.js";
 import { References_clauseContext } from "./PlSqlParser.js";
 import { On_delete_clauseContext } from "./PlSqlParser.js";
-import { Unique_key_clauseContext } from "./PlSqlParser.js";
-import { Primary_key_clauseContext } from "./PlSqlParser.js";
 import { Anonymous_blockContext } from "./PlSqlParser.js";
 import { Invoker_rights_clauseContext } from "./PlSqlParser.js";
 import { Call_specContext } from "./PlSqlParser.js";
@@ -850,6 +869,8 @@ import { Java_specContext } from "./PlSqlParser.js";
 import { C_specContext } from "./PlSqlParser.js";
 import { C_agent_in_clauseContext } from "./PlSqlParser.js";
 import { C_parameters_clauseContext } from "./PlSqlParser.js";
+import { C_external_parameterContext } from "./PlSqlParser.js";
+import { C_propertyContext } from "./PlSqlParser.js";
 import { ParameterContext } from "./PlSqlParser.js";
 import { Default_value_partContext } from "./PlSqlParser.js";
 import { Seq_of_declare_specsContext } from "./PlSqlParser.js";
@@ -870,7 +891,6 @@ import { Varray_type_defContext } from "./PlSqlParser.js";
 import { Seq_of_statementsContext } from "./PlSqlParser.js";
 import { Label_declarationContext } from "./PlSqlParser.js";
 import { StatementContext } from "./PlSqlParser.js";
-import { Swallow_to_semiContext } from "./PlSqlParser.js";
 import { Assignment_statementContext } from "./PlSqlParser.js";
 import { Continue_statementContext } from "./PlSqlParser.js";
 import { Exit_statementContext } from "./PlSqlParser.js";
@@ -890,9 +910,13 @@ import { Raise_statementContext } from "./PlSqlParser.js";
 import { Return_statementContext } from "./PlSqlParser.js";
 import { Call_statementContext } from "./PlSqlParser.js";
 import { Pipe_row_statementContext } from "./PlSqlParser.js";
+import { Selection_directiveContext } from "./PlSqlParser.js";
+import { Error_directiveContext } from "./PlSqlParser.js";
+import { Selection_directive_bodyContext } from "./PlSqlParser.js";
 import { BodyContext } from "./PlSqlParser.js";
 import { Exception_handlerContext } from "./PlSqlParser.js";
 import { Trigger_blockContext } from "./PlSqlParser.js";
+import { Tps_blockContext } from "./PlSqlParser.js";
 import { BlockContext } from "./PlSqlParser.js";
 import { Sql_statementContext } from "./PlSqlParser.js";
 import { Execute_immediateContext } from "./PlSqlParser.js";
@@ -902,6 +926,7 @@ import { Cursor_manipulation_statementsContext } from "./PlSqlParser.js";
 import { Close_statementContext } from "./PlSqlParser.js";
 import { Open_statementContext } from "./PlSqlParser.js";
 import { Fetch_statementContext } from "./PlSqlParser.js";
+import { Variable_or_collectionContext } from "./PlSqlParser.js";
 import { Open_for_statementContext } from "./PlSqlParser.js";
 import { Transaction_control_statementsContext } from "./PlSqlParser.js";
 import { Set_transaction_commandContext } from "./PlSqlParser.js";
@@ -910,13 +935,22 @@ import { Commit_statementContext } from "./PlSqlParser.js";
 import { Write_clauseContext } from "./PlSqlParser.js";
 import { Rollback_statementContext } from "./PlSqlParser.js";
 import { Savepoint_statementContext } from "./PlSqlParser.js";
+import { Collection_method_callContext } from "./PlSqlParser.js";
 import { Explain_statementContext } from "./PlSqlParser.js";
 import { Select_only_statementContext } from "./PlSqlParser.js";
 import { Select_statementContext } from "./PlSqlParser.js";
+import { With_clauseContext } from "./PlSqlParser.js";
+import { With_factoring_clauseContext } from "./PlSqlParser.js";
 import { Subquery_factoring_clauseContext } from "./PlSqlParser.js";
-import { Factoring_elementContext } from "./PlSqlParser.js";
 import { Search_clauseContext } from "./PlSqlParser.js";
 import { Cycle_clauseContext } from "./PlSqlParser.js";
+import { Subav_factoring_clauseContext } from "./PlSqlParser.js";
+import { Subav_clauseContext } from "./PlSqlParser.js";
+import { Hierarchies_clauseContext } from "./PlSqlParser.js";
+import { Filter_clausesContext } from "./PlSqlParser.js";
+import { Filter_clauseContext } from "./PlSqlParser.js";
+import { Add_calcs_clauseContext } from "./PlSqlParser.js";
+import { Add_calc_meas_clauseContext } from "./PlSqlParser.js";
 import { SubqueryContext } from "./PlSqlParser.js";
 import { Subquery_basic_elementsContext } from "./PlSqlParser.js";
 import { Subquery_operation_partContext } from "./PlSqlParser.js";
@@ -929,7 +963,7 @@ import { Table_refContext } from "./PlSqlParser.js";
 import { Table_ref_auxContext } from "./PlSqlParser.js";
 import { Table_ref_aux_internal_oneContext } from "./PlSqlParser.js";
 import { Table_ref_aux_internal_twoContext } from "./PlSqlParser.js";
-import { Table_ref_aux_internal_threeContext } from "./PlSqlParser.js";
+import { Table_ref_aux_internal_threContext } from "./PlSqlParser.js";
 import { Join_clauseContext } from "./PlSqlParser.js";
 import { Join_on_partContext } from "./PlSqlParser.js";
 import { Join_using_partContext } from "./PlSqlParser.js";
@@ -1009,12 +1043,12 @@ import { Subquery_restriction_clauseContext } from "./PlSqlParser.js";
 import { Sample_clauseContext } from "./PlSqlParser.js";
 import { Seed_partContext } from "./PlSqlParser.js";
 import { ConditionContext } from "./PlSqlParser.js";
-import { Json_conditionContext } from "./PlSqlParser.js";
-import { ExpressionsContext } from "./PlSqlParser.js";
+import { Expressions_Context } from "./PlSqlParser.js";
 import { ExpressionContext } from "./PlSqlParser.js";
 import { Cursor_expressionContext } from "./PlSqlParser.js";
 import { Logical_expressionContext } from "./PlSqlParser.js";
 import { Unary_logical_expressionContext } from "./PlSqlParser.js";
+import { Unary_logical_operationContext } from "./PlSqlParser.js";
 import { Logical_operationContext } from "./PlSqlParser.js";
 import { Multiset_expressionContext } from "./PlSqlParser.js";
 import { Relational_expressionContext } from "./PlSqlParser.js";
@@ -1029,12 +1063,19 @@ import { Model_expression_elementContext } from "./PlSqlParser.js";
 import { Single_column_for_loopContext } from "./PlSqlParser.js";
 import { Multi_column_for_loopContext } from "./PlSqlParser.js";
 import { Unary_expressionContext } from "./PlSqlParser.js";
+import { Unary_expression_coreContext } from "./PlSqlParser.js";
+import { Implicit_cursor_expressionContext } from "./PlSqlParser.js";
+import { Collection_expressionContext } from "./PlSqlParser.js";
 import { Case_statementContext } from "./PlSqlParser.js";
 import { Simple_case_statementContext } from "./PlSqlParser.js";
-import { Simple_case_when_partContext } from "./PlSqlParser.js";
 import { Searched_case_statementContext } from "./PlSqlParser.js";
-import { Searched_case_when_partContext } from "./PlSqlParser.js";
-import { Case_else_partContext } from "./PlSqlParser.js";
+import { Case_when_part_statementContext } from "./PlSqlParser.js";
+import { Case_else_part_statementContext } from "./PlSqlParser.js";
+import { Case_expressionContext } from "./PlSqlParser.js";
+import { Simple_case_expressionContext } from "./PlSqlParser.js";
+import { Searched_case_expressionContext } from "./PlSqlParser.js";
+import { Case_when_part_expressionContext } from "./PlSqlParser.js";
+import { Case_else_part_expressionContext } from "./PlSqlParser.js";
 import { AtomContext } from "./PlSqlParser.js";
 import { Quantified_expressionContext } from "./PlSqlParser.js";
 import { String_functionContext } from "./PlSqlParser.js";
@@ -1071,8 +1112,10 @@ import { Windowing_typeContext } from "./PlSqlParser.js";
 import { Windowing_elementsContext } from "./PlSqlParser.js";
 import { Using_clauseContext } from "./PlSqlParser.js";
 import { Using_elementContext } from "./PlSqlParser.js";
+import { Assignable_elementContext } from "./PlSqlParser.js";
 import { Collect_order_by_partContext } from "./PlSqlParser.js";
 import { Within_or_over_partContext } from "./PlSqlParser.js";
+import { String_delimiterContext } from "./PlSqlParser.js";
 import { Cost_matrix_clauseContext } from "./PlSqlParser.js";
 import { Xml_passing_clauseContext } from "./PlSqlParser.js";
 import { Xml_attributes_clauseContext } from "./PlSqlParser.js";
@@ -1085,24 +1128,26 @@ import { Xmlroot_param_standalone_partContext } from "./PlSqlParser.js";
 import { Xmlserialize_param_enconding_partContext } from "./PlSqlParser.js";
 import { Xmlserialize_param_version_partContext } from "./PlSqlParser.js";
 import { Xmlserialize_param_ident_partContext } from "./PlSqlParser.js";
-import { Sql_plus_command_no_semicolonContext } from "./PlSqlParser.js";
+import { Annotations_clauseContext } from "./PlSqlParser.js";
+import { Annotations_listContext } from "./PlSqlParser.js";
+import { AnnotationContext } from "./PlSqlParser.js";
 import { Sql_plus_commandContext } from "./PlSqlParser.js";
 import { Start_commandContext } from "./PlSqlParser.js";
+import { Sql_plus_filepathContext } from "./PlSqlParser.js";
 import { Whenever_commandContext } from "./PlSqlParser.js";
 import { Set_commandContext } from "./PlSqlParser.js";
 import { Timing_commandContext } from "./PlSqlParser.js";
+import { Clear_commandContext } from "./PlSqlParser.js";
 import { Partition_extension_clauseContext } from "./PlSqlParser.js";
 import { Column_aliasContext } from "./PlSqlParser.js";
 import { Table_aliasContext } from "./PlSqlParser.js";
 import { Where_clauseContext } from "./PlSqlParser.js";
-import { Quantitative_where_stmtContext } from "./PlSqlParser.js";
 import { Into_clauseContext } from "./PlSqlParser.js";
 import { Xml_column_nameContext } from "./PlSqlParser.js";
 import { Cost_class_nameContext } from "./PlSqlParser.js";
 import { Attribute_nameContext } from "./PlSqlParser.js";
 import { Savepoint_nameContext } from "./PlSqlParser.js";
 import { Rollback_segment_nameContext } from "./PlSqlParser.js";
-import { Table_var_nameContext } from "./PlSqlParser.js";
 import { Schema_nameContext } from "./PlSqlParser.js";
 import { Routine_nameContext } from "./PlSqlParser.js";
 import { Package_nameContext } from "./PlSqlParser.js";
@@ -1127,8 +1172,9 @@ import { Variable_nameContext } from "./PlSqlParser.js";
 import { Index_nameContext } from "./PlSqlParser.js";
 import { Cursor_nameContext } from "./PlSqlParser.js";
 import { Record_nameContext } from "./PlSqlParser.js";
-import { Collection_nameContext } from "./PlSqlParser.js";
 import { Link_nameContext } from "./PlSqlParser.js";
+import { Local_link_nameContext } from "./PlSqlParser.js";
+import { Connection_qualifierContext } from "./PlSqlParser.js";
 import { Column_nameContext } from "./PlSqlParser.js";
 import { Tableview_nameContext } from "./PlSqlParser.js";
 import { XmltableContext } from "./PlSqlParser.js";
@@ -1162,12 +1208,12 @@ import { Numeric_negativeContext } from "./PlSqlParser.js";
 import { Quoted_stringContext } from "./PlSqlParser.js";
 import { IdentifierContext } from "./PlSqlParser.js";
 import { Id_expressionContext } from "./PlSqlParser.js";
+import { Inquiry_directiveContext } from "./PlSqlParser.js";
 import { Outer_join_signContext } from "./PlSqlParser.js";
 import { Regular_idContext } from "./PlSqlParser.js";
+import { Non_reserved_keywords_in_18cContext } from "./PlSqlParser.js";
 import { Non_reserved_keywords_in_12cContext } from "./PlSqlParser.js";
 import { Non_reserved_keywords_pre12cContext } from "./PlSqlParser.js";
-import { String_function_nameContext } from "./PlSqlParser.js";
-import { Numeric_function_nameContext } from "./PlSqlParser.js";
 
 
 /**
@@ -1340,18 +1386,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitDiskgroup_attributes?: (ctx: Diskgroup_attributesContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.modify_diskgroup_file`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitModify_diskgroup_file?: (ctx: Modify_diskgroup_fileContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.disk_region_clause`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDisk_region_clause?: (ctx: Disk_region_clauseContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.drop_diskgroup_file_clause`.
 	 * @param ctx the parse tree
@@ -1532,6 +1566,36 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitResult_cache_clause?: (ctx: Result_cache_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.accessible_by_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAccessible_by_clause?: (ctx: Accessible_by_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.default_collation_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitDefault_collation_clause?: (ctx: Default_collation_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.aggregate_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAggregate_clause?: (ctx: Aggregate_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.pipelined_using_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitPipelined_using_clause?: (ctx: Pipelined_using_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.accessor`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAccessor?: (ctx: AccessorContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.relies_on_part`.
 	 * @param ctx the parse tree
@@ -1827,12 +1891,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitTrigger_body?: (ctx: Trigger_bodyContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.routine_clause`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitRoutine_clause?: (ctx: Routine_clauseContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.compound_trigger_block`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -1916,18 +1974,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitAlter_method_element?: (ctx: Alter_method_elementContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.alter_attribute_definition`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitAlter_attribute_definition?: (ctx: Alter_attribute_definitionContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.attribute_definition`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitAttribute_definition?: (ctx: Attribute_definitionContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.alter_collection_clauses`.
 	 * @param ctx the parse tree
@@ -2078,6 +2124,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitOverriding_function_spec?: (ctx: Overriding_function_specContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.overriding_procedure_spec`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitOverriding_procedure_spec?: (ctx: Overriding_procedure_specContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.type_procedure_spec`.
 	 * @param ctx the parse tree
@@ -2636,6 +2688,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitIndex_partitioning_clause?: (ctx: Index_partitioning_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.index_partitioning_values_list`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitIndex_partitioning_values_list?: (ctx: Index_partitioning_values_listContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.local_partitioned_index`.
 	 * @param ctx the parse tree
@@ -3957,6 +4015,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitParallel_clause?: (ctx: Parallel_clauseContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.parallel_instances_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParallel_instances_clause?: (ctx: Parallel_instances_clauseContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.alter_materialized_view`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -4010,30 +4074,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitMv_log_augmentation?: (ctx: Mv_log_augmentationContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.datetime_expr`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDatetime_expr?: (ctx: Datetime_exprContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.interval_expr`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitInterval_expr?: (ctx: Interval_exprContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.synchronous_or_asynchronous`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitSynchronous_or_asynchronous?: (ctx: Synchronous_or_asynchronousContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.including_or_excluding`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitIncluding_or_excluding?: (ctx: Including_or_excludingContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.create_materialized_view_log`.
 	 * @param ctx the parse tree
@@ -4203,11 +4243,29 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitCreate_mv_refresh?: (ctx: Create_mv_refreshContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.query_rewrite_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitQuery_rewrite_clause?: (ctx: Query_rewrite_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.unusable_editions_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitUnusable_editions_clause?: (ctx: Unusable_editions_clauseContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.drop_materialized_view`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitDrop_materialized_view?: (ctx: Drop_materialized_viewContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.drop_materialized_view_log`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitDrop_materialized_view_log?: (ctx: Drop_materialized_view_logContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.create_context`.
 	 * @param ctx the parse tree
@@ -4358,6 +4416,18 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitRelational_table?: (ctx: Relational_tableContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.relational_table_properties`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRelational_table_properties?: (ctx: Relational_table_propertiesContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.relational_table_property`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRelational_table_property?: (ctx: Relational_table_propertyContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.immutable_table_clauses`.
 	 * @param ctx the parse tree
@@ -4653,6 +4723,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitRange_values_clause?: (ctx: Range_values_clauseContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.range_values_list`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRange_values_list?: (ctx: Range_values_listContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.list_values_clause`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -4676,12 +4752,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitLob_partitioning_storage?: (ctx: Lob_partitioning_storageContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.datatype_null_enable`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDatatype_null_enable?: (ctx: Datatype_null_enableContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.size_clause`.
 	 * @param ctx the parse tree
@@ -4839,11 +4909,137 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitExternal_table_data_props?: (ctx: External_table_data_propsContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.opaque_format_spec`.
+	 * Visit a parse tree produced by `PlSqlParser.external_table_data_format`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	visitOpaque_format_spec?: (ctx: Opaque_format_specContext) => Result;
+	visitExternal_table_data_format?: (ctx: External_table_data_formatContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_transform`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_transform?: (ctx: External_table_transformContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_field`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_field?: (ctx: External_table_fieldContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_field_list`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_field_list?: (ctx: External_table_field_listContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_fields_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_fields_clause?: (ctx: External_table_fields_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_position_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_position_clause?: (ctx: External_table_position_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_datatype_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_datatype_clause?: (ctx: External_table_datatype_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_delimit_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_delimit_clause?: (ctx: External_table_delimit_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_trim_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_trim_clause?: (ctx: External_table_trim_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_date_format_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_date_format_clause?: (ctx: External_table_date_format_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_init_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_init_clause?: (ctx: External_table_init_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_condition_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_condition_clause?: (ctx: External_table_condition_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_lls_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_lls_clause?: (ctx: External_table_lls_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_records`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_records?: (ctx: External_table_recordsContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_record_options_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_record_options_clause?: (ctx: External_table_record_options_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_output_files`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_output_files?: (ctx: External_table_output_filesContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_fields`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_fields?: (ctx: External_table_fieldsContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_datapump`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_datapump?: (ctx: External_table_datapumpContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_hive`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_hive?: (ctx: External_table_hiveContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_hive_parameter_map`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_hive_parameter_map?: (ctx: External_table_hive_parameter_mapContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_hive_parameter_map_entry`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_hive_parameter_map_entry?: (ctx: External_table_hive_parameter_map_entryContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.external_table_directory`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitExternal_table_directory?: (ctx: External_table_directoryContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.row_movement_clause`.
 	 * @param ctx the parse tree
@@ -5475,6 +5671,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitLink_authentication?: (ctx: Link_authenticationContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.create_schema`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCreate_schema?: (ctx: Create_schemaContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.create_database`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -5558,12 +5760,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitCreate_database_link?: (ctx: Create_database_linkContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.dblink`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDblink?: (ctx: DblinkContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.drop_database_link`.
 	 * @param ctx the parse tree
@@ -5684,6 +5880,24 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitAlter_interval_partition?: (ctx: Alter_interval_partitionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.move_table_partition`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitMove_table_partition?: (ctx: Move_table_partitionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.filter_condition`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitFilter_condition?: (ctx: Filter_conditionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.rename_table_partition`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRename_table_partition?: (ctx: Rename_table_partitionContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.partition_extended_names`.
 	 * @param ctx the parse tree
@@ -5901,12 +6115,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitAdd_column_clause?: (ctx: Add_column_clauseContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.alter_varray_col_properties`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitAlter_varray_col_properties?: (ctx: Alter_varray_col_propertiesContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.varray_col_properties`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -6063,23 +6271,29 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitVirtual_column_definition?: (ctx: Virtual_column_definitionContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.virtual_column_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitVirtual_column_expression?: (ctx: Virtual_column_expressionContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.autogenerated_sequence_definition`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitAutogenerated_sequence_definition?: (ctx: Autogenerated_sequence_definitionContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.by_user_for_statistics_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitBy_user_for_statistics_clause?: (ctx: By_user_for_statistics_clauseContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.evaluation_edition_clause`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitEvaluation_edition_clause?: (ctx: Evaluation_edition_clauseContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.out_of_line_part_storage`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitOut_of_line_part_storage?: (ctx: Out_of_line_part_storageContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.nested_table_col_properties`.
 	 * @param ctx the parse tree
@@ -6111,12 +6325,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitSupplemental_logging_props?: (ctx: Supplemental_logging_propsContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.column_or_attribute`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitColumn_or_attribute?: (ctx: Column_or_attributeContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.object_type_col_properties`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -6147,47 +6355,11 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitDrop_constraint_clause?: (ctx: Drop_constraint_clauseContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.drop_primary_key_or_unique_or_generic_clause`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDrop_primary_key_or_unique_or_generic_clause?: (ctx: Drop_primary_key_or_unique_or_generic_clauseContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.add_constraint`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitAdd_constraint?: (ctx: Add_constraintContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.add_constraint_clause`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitAdd_constraint_clause?: (ctx: Add_constraint_clauseContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.check_constraint`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitCheck_constraint?: (ctx: Check_constraintContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.drop_constraint`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDrop_constraint?: (ctx: Drop_constraintContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.enable_constraint`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitEnable_constraint?: (ctx: Enable_constraintContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.disable_constraint`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitDisable_constraint?: (ctx: Disable_constraintContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.foreign_key_clause`.
 	 * @param ctx the parse tree
@@ -6206,18 +6378,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitOn_delete_clause?: (ctx: On_delete_clauseContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.unique_key_clause`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitUnique_key_clause?: (ctx: Unique_key_clauseContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.primary_key_clause`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitPrimary_key_clause?: (ctx: Primary_key_clauseContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.anonymous_block`.
 	 * @param ctx the parse tree
@@ -6260,6 +6420,18 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitC_parameters_clause?: (ctx: C_parameters_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.c_external_parameter`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitC_external_parameter?: (ctx: C_external_parameterContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.c_property`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitC_property?: (ctx: C_propertyContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.parameter`.
 	 * @param ctx the parse tree
@@ -6381,12 +6553,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitStatement?: (ctx: StatementContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.swallow_to_semi`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitSwallow_to_semi?: (ctx: Swallow_to_semiContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.assignment_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -6501,6 +6667,24 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitPipe_row_statement?: (ctx: Pipe_row_statementContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.selection_directive`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSelection_directive?: (ctx: Selection_directiveContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.error_directive`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitError_directive?: (ctx: Error_directiveContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.selection_directive_body`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSelection_directive_body?: (ctx: Selection_directive_bodyContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.body`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -6518,6 +6702,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitTrigger_block?: (ctx: Trigger_blockContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.tps_block`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitTps_block?: (ctx: Tps_blockContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.block`.
 	 * @param ctx the parse tree
@@ -6573,6 +6763,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitFetch_statement?: (ctx: Fetch_statementContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.variable_or_collection`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitVariable_or_collection?: (ctx: Variable_or_collectionContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.open_for_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -6621,6 +6817,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitSavepoint_statement?: (ctx: Savepoint_statementContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.collection_method_call`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCollection_method_call?: (ctx: Collection_method_callContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.explain_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -6639,17 +6841,23 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitSelect_statement?: (ctx: Select_statementContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.with_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitWith_clause?: (ctx: With_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.with_factoring_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitWith_factoring_clause?: (ctx: With_factoring_clauseContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.subquery_factoring_clause`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitSubquery_factoring_clause?: (ctx: Subquery_factoring_clauseContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.factoring_element`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitFactoring_element?: (ctx: Factoring_elementContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.search_clause`.
 	 * @param ctx the parse tree
@@ -6662,6 +6870,48 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitCycle_clause?: (ctx: Cycle_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.subav_factoring_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSubav_factoring_clause?: (ctx: Subav_factoring_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.subav_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSubav_clause?: (ctx: Subav_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.hierarchies_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitHierarchies_clause?: (ctx: Hierarchies_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.filter_clauses`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitFilter_clauses?: (ctx: Filter_clausesContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.filter_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitFilter_clause?: (ctx: Filter_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.add_calcs_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAdd_calcs_clause?: (ctx: Add_calcs_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.add_calc_meas_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAdd_calc_meas_clause?: (ctx: Add_calc_meas_clauseContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.subquery`.
 	 * @param ctx the parse tree
@@ -6737,12 +6987,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitTable_ref_aux_internal_two?: (ctx: Table_ref_aux_internal_twoContext) => Result;
 	/**
-	 * Visit a parse tree produced by the `table_ref_aux_internal_three`
+	 * Visit a parse tree produced by the `table_ref_aux_internal_thre`
 	 * labeled alternative in `PlSqlParser.table_ref_aux_internal`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	visitTable_ref_aux_internal_three?: (ctx: Table_ref_aux_internal_threeContext) => Result;
+	visitTable_ref_aux_internal_thre?: (ctx: Table_ref_aux_internal_threContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.join_clause`.
 	 * @param ctx the parse tree
@@ -7218,17 +7468,11 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitCondition?: (ctx: ConditionContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.json_condition`.
+	 * Visit a parse tree produced by `PlSqlParser.expressions_`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	visitJson_condition?: (ctx: Json_conditionContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.expressions`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitExpressions?: (ctx: ExpressionsContext) => Result;
+	visitExpressions_?: (ctx: Expressions_Context) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.expression`.
 	 * @param ctx the parse tree
@@ -7253,6 +7497,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitUnary_logical_expression?: (ctx: Unary_logical_expressionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.unary_logical_operation`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitUnary_logical_operation?: (ctx: Unary_logical_operationContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.logical_operation`.
 	 * @param ctx the parse tree
@@ -7338,6 +7588,24 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitUnary_expression?: (ctx: Unary_expressionContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.unary_expression_core`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitUnary_expression_core?: (ctx: Unary_expression_coreContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.implicit_cursor_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitImplicit_cursor_expression?: (ctx: Implicit_cursor_expressionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.collection_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCollection_expression?: (ctx: Collection_expressionContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.case_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -7350,29 +7618,53 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitSimple_case_statement?: (ctx: Simple_case_statementContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.simple_case_when_part`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitSimple_case_when_part?: (ctx: Simple_case_when_partContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.searched_case_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitSearched_case_statement?: (ctx: Searched_case_statementContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.searched_case_when_part`.
+	 * Visit a parse tree produced by `PlSqlParser.case_when_part_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	visitSearched_case_when_part?: (ctx: Searched_case_when_partContext) => Result;
+	visitCase_when_part_statement?: (ctx: Case_when_part_statementContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.case_else_part`.
+	 * Visit a parse tree produced by `PlSqlParser.case_else_part_statement`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	visitCase_else_part?: (ctx: Case_else_partContext) => Result;
+	visitCase_else_part_statement?: (ctx: Case_else_part_statementContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.case_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_expression?: (ctx: Case_expressionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.simple_case_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSimple_case_expression?: (ctx: Simple_case_expressionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.searched_case_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSearched_case_expression?: (ctx: Searched_case_expressionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.case_when_part_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_when_part_expression?: (ctx: Case_when_part_expressionContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.case_else_part_expression`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_else_part_expression?: (ctx: Case_else_part_expressionContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.atom`.
 	 * @param ctx the parse tree
@@ -7590,6 +7882,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitUsing_element?: (ctx: Using_elementContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.assignable_element`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAssignable_element?: (ctx: Assignable_elementContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.collect_order_by_part`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -7601,6 +7899,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitWithin_or_over_part?: (ctx: Within_or_over_partContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.string_delimiter`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitString_delimiter?: (ctx: String_delimiterContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.cost_matrix_clause`.
 	 * @param ctx the parse tree
@@ -7674,11 +7978,23 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitXmlserialize_param_ident_part?: (ctx: Xmlserialize_param_ident_partContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.sql_plus_command_no_semicolon`.
+	 * Visit a parse tree produced by `PlSqlParser.annotations_clause`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	visitSql_plus_command_no_semicolon?: (ctx: Sql_plus_command_no_semicolonContext) => Result;
+	visitAnnotations_clause?: (ctx: Annotations_clauseContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.annotations_list`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAnnotations_list?: (ctx: Annotations_listContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.annotation`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAnnotation?: (ctx: AnnotationContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.sql_plus_command`.
 	 * @param ctx the parse tree
@@ -7691,6 +8007,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitStart_command?: (ctx: Start_commandContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.sql_plus_filepath`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSql_plus_filepath?: (ctx: Sql_plus_filepathContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.whenever_command`.
 	 * @param ctx the parse tree
@@ -7709,6 +8031,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitTiming_command?: (ctx: Timing_commandContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.clear_command`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitClear_command?: (ctx: Clear_commandContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.partition_extension_clause`.
 	 * @param ctx the parse tree
@@ -7733,12 +8061,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitWhere_clause?: (ctx: Where_clauseContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.quantitative_where_stmt`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitQuantitative_where_stmt?: (ctx: Quantitative_where_stmtContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.into_clause`.
 	 * @param ctx the parse tree
@@ -7775,12 +8097,6 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitRollback_segment_name?: (ctx: Rollback_segment_nameContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.table_var_name`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitTable_var_name?: (ctx: Table_var_nameContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.schema_name`.
 	 * @param ctx the parse tree
@@ -7926,17 +8242,23 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitRecord_name?: (ctx: Record_nameContext) => Result;
 	/**
-	 * Visit a parse tree produced by `PlSqlParser.collection_name`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitCollection_name?: (ctx: Collection_nameContext) => Result;
-	/**
 	 * Visit a parse tree produced by `PlSqlParser.link_name`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitLink_name?: (ctx: Link_nameContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.local_link_name`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitLocal_link_name?: (ctx: Local_link_nameContext) => Result;
+	/**
+	 * Visit a parse tree produced by `PlSqlParser.connection_qualifier`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitConnection_qualifier?: (ctx: Connection_qualifierContext) => Result;
 	/**
 	 * Visit a parse tree produced by `PlSqlParser.column_name`.
 	 * @param ctx the parse tree
@@ -8136,6 +8458,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitId_expression?: (ctx: Id_expressionContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.inquiry_directive`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitInquiry_directive?: (ctx: Inquiry_directiveContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.outer_join_sign`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -8148,6 +8476,12 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 */
 	visitRegular_id?: (ctx: Regular_idContext) => Result;
 	/**
+	 * Visit a parse tree produced by `PlSqlParser.non_reserved_keywords_in_18c`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitNon_reserved_keywords_in_18c?: (ctx: Non_reserved_keywords_in_18cContext) => Result;
+	/**
 	 * Visit a parse tree produced by `PlSqlParser.non_reserved_keywords_in_12c`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -8159,17 +8493,5 @@ export default class PlSqlParserVisitor<Result> extends ParseTreeVisitor<Result>
 	 * @return the visitor result
 	 */
 	visitNon_reserved_keywords_pre12c?: (ctx: Non_reserved_keywords_pre12cContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.string_function_name`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitString_function_name?: (ctx: String_function_nameContext) => Result;
-	/**
-	 * Visit a parse tree produced by `PlSqlParser.numeric_function_name`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitNumeric_function_name?: (ctx: Numeric_function_nameContext) => Result;
 }
 

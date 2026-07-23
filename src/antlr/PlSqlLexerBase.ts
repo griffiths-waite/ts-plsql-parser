@@ -1,15 +1,10 @@
-import { CharStream, Lexer } from "antlr4";
+import { CommonToken, Lexer, CharStream, Token } from "antlr4";
+import PlSqlParser from './PlSqlParser';
 
 export default abstract class PlSqlLexerBase extends Lexer {
-  self: PlSqlLexerBase;
-
-  constructor(input: CharStream) {
-    super(input);
-    this.self = this;
-  }
-
   IsNewlineAtPos(pos: number): boolean {
     const la = this._input.LA(pos);
-    return la == -1 || String.fromCharCode(la) == "\n";
+    return la == -1 || String.fromCharCode(la) == '\n';
   }
+
 }
